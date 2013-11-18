@@ -1,0 +1,14 @@
+.col-md-6 
+	h4 
+		div.clip: a(href='#{video.link}') #{video.name}
+	.row
+		.col-md-12.inline-block.pull-left
+			a(href='#{video.link}')
+				img(src='#{video.imageUrl}' alt='TTTTT')
+	div(style='height:5px')
+	.row.small
+		.col-md-6.inline
+			each tag in video.tags
+				span.label.label-info=tag
+				&nbsp;
+	div(style='height:5px')				

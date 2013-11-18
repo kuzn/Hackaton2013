@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	.container
+		form.form-horizontal(method='post')
+			.form-group
+				label.col-sm-2.control-label(for='nameInput') Name
+				.col-sm-10
+					input.form-control#nameInput(name='name', value='#{model.name}')
+			.form-group
+				label.col-sm-2.control-label(for='descriptionInput') Description
+				.col-sm-10
+					textarea.form-control#descriptionInput(name='description',rows="4",cols="50")=model.description
+			.form-group
+				label.col-sm-2.control-label(for='tagsInput') Tags
+				.col-sm-10
+					input.form-control.tags-input#tagsInput(name='tags', value='#{model.tags}')
+			.form-group
+				.col-sm-offset-2.col-sm-10
+					button.btn.btn-success Save
+

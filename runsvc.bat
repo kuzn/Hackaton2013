@@ -1,0 +1,2 @@
+cd svc
+npm start

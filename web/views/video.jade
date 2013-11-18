@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	.content	
+		.row
+			.col-md-10.col-md-offset-3
+					h3 #{model.name}
+					video.pull-center.video-width(src='#{model.url}', controls)
+					div(style='height:20px')
+					each tag in model.tags
+						span.label.label-info=tag
+						&nbsp;
+					div(style='height:20px')
+		.row
+			.col-md-10.col-md-offset-3
+				a.btn.btn-success(href='#{model.editUrl}') Edit
+		

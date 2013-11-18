@@ -1,0 +1,7 @@
+
+> node-svc@0.0.1 start C:\Hackaton\svc
+> node_modules\.bin\supervisor app.js
+
+
+
+Terminate batch job (Y/N)? 

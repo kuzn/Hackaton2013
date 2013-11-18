@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	.container
+		.row
+			.col-md-2.pull-right
+				each tag in model.menuTags
+					a.btn.btn-primary.btn-block.btn-lg.strong(href="#{tag.url}")= tag.name
+				div(style="height:20px")					
+				each tagCloud in model.tags
+					&nbsp;
+					a(href="#{tagCloud.url}").inline.cloud-tag=tagCloud.name+' '
+			.col-md-8.col-md-offset-1.pull-left
+				include list
